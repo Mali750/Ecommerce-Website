@@ -11,6 +11,7 @@ import AppContext from "./utils/context";
 
 function App() {
     return (
+        <div className="flex flex-col min-h-screen">
         <BrowserRouter>
             <AppContext>
                 <Header />
@@ -23,6 +24,7 @@ function App() {
                 <Footer />
             </AppContext>
         </BrowserRouter>
+        </div>
     );
 }
 

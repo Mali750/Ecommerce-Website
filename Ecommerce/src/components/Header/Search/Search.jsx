@@ -12,9 +12,7 @@ const Search = ({ setSearchModal }) => {
         setQuery(e.target.value);
     };
 
-    let { data } = useFetch(
-        `/api/products?populate=*&filters[title][$contains]=${query}`
-    );
+    let { data } = useFetch(`/api/products?populate=*&filters[title][$contains]=${query}`);
 
     if (!query.length) {
         data = null;
